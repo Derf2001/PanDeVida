@@ -26,7 +26,7 @@
         <div class="album-card" aria-label="Portada del álbum">
           <div class="album-disc">
             <div class="disc-inner">
-              <img id="cover-image" alt="Portada de la canción actual" src="portada/Vinilo.png" />
+              <img id="cover-image" src="portada/Vinilo.png" />
             </div>
           </div>
           <div class="album-meta">
@@ -52,6 +52,10 @@
             <span id="current-time">0:00</span>
             <input id="progress" class="progress-bar" type="range" min="0" max="100" value="0" aria-label="Progreso de reproducción" />
             <span id="duration">0:00</span>
+            <div class="volume-container">
+              <span>🔈</span>
+              <input id="volume" class="progress-bar" type="range" min="0" max="1" step="0.1" value="1" aria-label="Control de volumen" />
+            </div>
           </div>
 
           <a id="youtube-link" class="ghost-button ghost-button--link" href="https://www.youtube.com/watch?v=ggG9ySCChYw" target="_blank" rel="noreferrer">Abrir en YouTube</a>
@@ -68,7 +72,7 @@
         </div>
 
         <div class="song-list" role="list" aria-label="Canciones disponibles">
-          <button class="song-row is-active" type="button" role="listitem" data-audio-src="audio/Softcore.mp3" data-title="Softcore" data-artist="The Neighbourhood" data-duration="3:31" data-cover="portada/port.jpg" data-youtube-url="https://www.youtube.com/watch?v=ggG9ySCChYw">
+          <button class="song-row is-active" type="button" role="listitem" data-audio-src="audio/Softcore.mp3" data-title="Softcore" data-artist="The Neighbourhood" data-duration="3:31" data-cover="" data-youtube-url="https://www.youtube.com/watch?v=ggG9ySCChYw">
             <span class="play-icon" aria-hidden="true"></span>
             <div class="song-info">
               <strong>Softcore</strong>
