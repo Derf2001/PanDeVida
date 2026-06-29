@@ -43,7 +43,6 @@ function updatePlayState(isPlaying) {
 }
 
 function updateCover(track) {
-  // coverImage.src = track.cover;
   coverImage.alt = `Portada de ${track.title}`;
 }
 
