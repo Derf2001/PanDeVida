@@ -545,7 +545,7 @@ body.is-playing .album-disc {
   }
 
   .album-disc {
-    width: min(100%, 300px);
+    width: min(100%, 250px);
   }
 
   .song-row {
