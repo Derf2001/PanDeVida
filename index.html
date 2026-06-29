@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Music</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <main class="app-shell">
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <p class="eyebrow">Colección personal</p>
+          <h1>Top Canciones Mas Migajeras</h1>
+          <p class="hero-text">
+            Una colección personal de las canciones más migajeras.
+          </p>
+        </div>
+
+        <div class="album-card" aria-label="Portada del álbum">
+          <div class="album-disc">
+            <div class="disc-inner">
+              <img id="cover-image" alt="Portada de la canción actual" src="" />
+            </div>
+          </div>
+          <div class="album-meta">
+            <p class="album-label">Portada destacada</p>
+            <h2 id="album-title">Softcore</h2>
+            <p id="album-artist">The Neighbourhood</p>
+          </div>
+        </div>
+        <section class="player-card" aria-label="Reproductor">
+          <div class="player-info">
+            <p class="eyebrow">Reproduciendo ahora</p>
+            <h3 id="current-title">Softcore</h3>
+            <p id="current-artist">The Neighbourhood</p>
+          </div>
+
+          <div class="transport-controls" aria-label="Controles de reproducción">
+            <button class="transport-button" id="prev-btn" type="button" aria-label="Canción anterior">⟨⟨</button>
+            <button class="transport-button transport-button--primary" id="play-btn" type="button" aria-label="Reproducir o pausar">▶</button>
+            <button class="transport-button" id="next-btn" type="button" aria-label="Siguiente canción">⟩⟩</button>
+          </div>
+
+          <div class="progress-row">
+            <span id="current-time">0:00</span>
+            <input id="progress" class="progress-bar" type="range" min="0" max="100" value="0" aria-label="Progreso de reproducción" />
+            <span id="duration">0:00</span>
+          </div>
+
+          <a id="youtube-link" class="ghost-button ghost-button--link" href="https://www.youtube.com/watch?v=ggG9ySCChYw" target="_blank" rel="noreferrer">Abrir en YouTube</a>
+        </section>
+      </section>
+
+      <section class="library-panel" aria-labelledby="library-title">
+        <div class="library-header">
+          <div>
+            <p class="eyebrow">Biblioteca</p>
+            <h2 id="library-title">Nombre de la canción</h2>
+          </div>
+          <button class="ghost-button" type="button">Ver todo</button>
+        </div>
+
+        <div class="song-list" role="list" aria-label="Canciones disponibles">
+          <button class="song-row is-active" type="button" role="listitem" data-audio-src="audio/Softcore.mp3" data-title="Softcore" data-artist="The Neighbourhood" data-duration="3:31" data-cover="https://i.ytimg.com/vi/ggG9ySCChYw/hqdefault.jpg" data-youtube-url="https://www.youtube.com/watch?v=ggG9ySCChYw">
+            <span class="play-icon" aria-hidden="true"></span>
+            <div class="song-info">
+              <strong>Softcore</strong>
+              <span>The Neighbourhood</span>
+            </div>
+            <span class="song-time">3:31</span>
+          </button>
+
+          <button class="song-row" type="button" role="listitem" data-audio-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" data-title="Daddy Issues" data-artist="The Neighbourhood" data-duration="3:42" data-cover="https://i.ytimg.com/vi/_lMlsPQJs6U/hqdefault.jpg" data-youtube-url="https://www.youtube.com/watch?v=_lMlsPQJs6U">
+            <span class="play-icon" aria-hidden="true"></span>
+            <div class="song-info">
+              <strong>Daddy Issues</strong>
+              <span>The Neighbourhood</span>
+            </div>
+            <span class="song-time">3:42</span>
+          </button>
+
+          <button class="song-row" type="button" role="listitem" data-audio-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3" data-title="Sweater Weather" data-artist="The Neighbourhood" data-duration="4:13" data-cover="https://i.ytimg.com/vi/GCdwKhTtNNw/hqdefault.jpg" data-youtube-url="https://www.youtube.com/watch?v=GCdwKhTtNNw">
+            <span class="play-icon" aria-hidden="true"></span>
+            <div class="song-info">
+              <strong>Sweater Weather</strong>
+              <span>The Neighbourhood</span>
+            </div>
+            <span class="song-time">4:13</span>
+          </button>
+
+          <button class="song-row" type="button" role="listitem" data-audio-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3" data-title="505" data-artist="Arctic Monkeys" data-duration="4:12" data-cover="https://i.ytimg.com/vi/CKI8iQTgZKU/hqdefault.jpg" data-youtube-url="https://www.youtube.com/watch?v=CKI8iQTgZKU">
+            <span class="play-icon" aria-hidden="true"></span>
+            <div class="song-info">
+              <strong>505</strong>
+              <span>Arctic Monkeys</span>
+            </div>
+            <span class="song-time">4:12</span>
+          </button>
+
+          <button class="song-row" type="button" role="listitem" data-audio-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3" data-title="Do I Wanna Know?" data-artist="Arctic Monkeys" data-duration="4:26" data-cover="https://i.ytimg.com/vi/bpOSxM0rNPM/hqdefault.jpg" data-youtube-url="https://www.youtube.com/watch?v=bpOSxM0rNPM">
+            <span class="play-icon" aria-hidden="true"></span>
+            <div class="song-info">
+              <strong>Do I Wanna Know?</strong>
+              <span>Arctic Monkeys</span>
+            </div>
+            <span class="song-time">4:26</span>
+          </button>
+
+          <button class="song-row" type="button" role="listitem" data-audio-src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3" data-title="I Wanna Be Yours" data-artist="Arctic Monkeys" data-duration="3:04" data-cover="https://i.ytimg.com/vi/nyuo9-OjNNg/hqdefault.jpg" data-youtube-url="https://www.youtube.com/watch?v=nyuo9-OjNNg">
+            <span class="play-icon" aria-hidden="true"></span>
+            <div class="song-info">
+              <strong>I Wanna Be Yours</strong>
+              <span>Arctic Monkeys</span>
+            </div>
+            <span class="song-time">3:04</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <audio id="player" preload="metadata"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
