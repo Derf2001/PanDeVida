@@ -35,6 +35,22 @@ body {
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("portada/Fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.15;   /* Ajusta la opacidad aquí */
+
+  z-index: -2;
 }
 
 .background-glow {
@@ -154,9 +170,9 @@ body {
 }
 
 .disc-inner {
-  width: 74%;
-  height: 74%;
-  border-radius: 50%;
+  width: 70%;
+  height: 100%;
+  border-radius: 100%;
   border: 1px solid rgba(255, 255, 255, 0.12);
   display: grid;
   place-items: center;
@@ -167,16 +183,18 @@ body {
   font-size: 0.8rem;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(2px);
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
   z-index: 1;
 }
 
 .disc-inner img {
-  width: 100%;
+  width: 170%;
   height: 100%;
   object-fit: cover;
   display: block;
+  /* transform: translate(1px, -100px); */
+  transform: translate(0%, -8%);
 }
 
 .album-meta {
