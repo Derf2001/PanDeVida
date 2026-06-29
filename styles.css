@@ -145,7 +145,7 @@ body::before {
 }
 
 .album-disc {
-  width: min(100%, 100px);
+  width: min(100%, 420px);
   aspect-ratio: 1;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.22);
