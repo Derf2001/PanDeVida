@@ -13,6 +13,7 @@ const albumTitle = document.querySelector('#album-title');
 const albumArtist = document.querySelector('#album-artist');
 const coverImage = document.querySelector('#cover-image');
 const youtubeLink = document.querySelector('#youtube-link');
+const volumeBar = document.querySelector('#volume');
 
 const tracks = rows.map((row) => ({
   title: row.dataset.title ?? row.querySelector('.song-info strong')?.textContent ?? 'Canción',
@@ -43,7 +44,7 @@ function updatePlayState(isPlaying) {
 }
 
 function updateCover(track) {
-  coverImage.alt = `Portada de ${track.title}`;
+
 }
 
 function updateYoutubeLink(track) {
@@ -157,3 +158,12 @@ player.addEventListener('ended', () => {
 });
 
 setActiveTrack(0, false);
+
+player.volume = 0.5;
+volumeBar.value = 0.5;
+
+volumeBar.addEventListener('input', (e) => {
+  const volume = e.target.value;
+  player.volume = volume;
+});
+
